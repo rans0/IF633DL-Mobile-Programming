@@ -1,2 +1,1 @@
-# IF633DL-Mobile-Programming
-Kharansyah Thawaddu Shalam - 32371
+# Kharansyah Thawaddu Shalam - 32371
