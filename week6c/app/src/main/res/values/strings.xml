@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">week6c</string>
+    <string name="text_spring">Ini tombol SPRING</string>
+    <string name="text_fling">Ini tombol FLING</string>
+</resources>
