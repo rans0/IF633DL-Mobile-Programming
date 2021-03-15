@@ -39,35 +39,27 @@ public class MainActivity extends AppCompatActivity {
         MediaController controller = new MediaController(this);
         controller.setMediaPlayer(kotakVideo);
         kotakVideo.setMediaController(controller);
+
         foto.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onClick(View v) {
-                Intent takePictureIntent = new
-                        Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-                if(ContextCompat.checkSelfPermission(v.getContext(), Manifest.permission.CAMERA)
-                        == PackageManager.PERMISSION_DENIED) {
-                    requestPermissions(new String[] {
-                            Manifest.permission.CAMERA
-                    }, 100);
-                } else {
-                    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-                        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPUTRE);
-                    }   
+                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (takePictureIntent.resolveActivity(getPackageManager()) != null){
+                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPUTRE);
                 }
             }
         });
+
         video.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent takeVideoIntent = new
-                       Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-               if (takeVideoIntent.resolveActivity(getPackageManager()) != null) {
-                   startActivityForResult(takeVideoIntent, REQUEST_VIDEO_CAPTURE);
-               }
-           }
+            @Override
+            public void onClick(View v) {
+                Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+                if (takeVideoIntent.resolveActivity(getPackageManager()) != null){
+                    startActivityForResult(takeVideoIntent, REQUEST_VIDEO_CAPTURE);
+                }
+            }
         });
+
     }
 
     @Override
