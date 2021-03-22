@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">32731_UTS</string>
+    <string name="song_name">Song Name</string>
+    <string name="song_artist">Song Artist</string>
+    <string name="song_startDuration">1:00</string>
+    <string name="song_endDuration">4:27</string>
+    <string name="referensi">Referensi</string>
+    <string name="youtube">Youtube : https://www.youtube.com/c/Programmity/</string>
+</resources>
